@@ -1,0 +1,396 @@
+section{
+    width: 100%;
+}
+section > h2{
+    font-size: 4.5rem;
+    text-align: center;
+}
+.story{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+}
+
+.story-content{
+    width: 50%;
+    margin-left: 25px;
+}
+.story-content > h3{
+    color:red;
+    font-size: 3rem;
+    padding: 25px 10px;
+}
+.story-content > p{
+   color: #000;
+   font-size: 2rem;
+   padding: 10px;
+}
+.story-content > h4{
+    font-size: 2rem;
+    margin-top: 10px;
+    color: blue;
+    padding: 10px;
+}
+
+.story-img{
+    margin-right: 25px;
+    width: 45%;
+    height: 550px;
+    border: 1px solid blue;
+}
+
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    will-change: transform, opacity;
+  }
+  
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+    
+.mission, .vision, .partnership{
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid blue;
+}
+
+.mission > h3{
+font-size: 3rem;
+color: red;
+text-align: center;
+}
+
+.mission > ul{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid blue;
+}
+.mission > ul > li{
+    width:30%;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.vision >h3{
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+}
+.vision > p{
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.partnership{
+    background-color: rgb(44, 7, 7);
+}
+.partnership >h3{
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+}
+.partnership >ul{   
+    list-style-type: none;
+    width:  80%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.partnership > ul > li{
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    color: #fff;
+    font-size: 2rem;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.network{
+    width: 80%;
+    margin: 50px auto;
+    height: 300px;
+}
+.network >h2{
+    font-size: 4.5rem;
+    color: red;
+    text-align: center;
+}
+.boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.box-wrapper{
+    width: 20%;
+    height: 250px;
+    position: relative;
+    opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.box-wrapper.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+.box{
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+    border: 1px solid blue;
+    box-shadow: -2px 1px 3px hsla(100, 50%, 15%, 0.75);
+    transform: rotate(25deg);
+    margin: 35px 0;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+}
+
+.text{
+    width: 100%;
+    transform: rotate(-25deg);
+    font-size: 3rem;
+}
+.box-wrapper > .one{
+    bottom: -20px;
+    left: 115px;
+}
+.box-wrapper > .two{
+    top: -20px;
+    left: 125px;
+}
+.box-wrapper > .three{
+    bottom: -20px;
+    right: 125px;
+}
+.box-wrapper > .four{
+    top: -20px;
+    right: 125px;
+}
+
+.box-content{
+    width: 80%;
+    height: 20%;
+    /* background-color: #333; */
+    margin-inline: auto;
+    text-align: center;
+}
+
+.box-content > h3{
+    font-size: 2rem;
+    color: red;
+}
+
+.box-content > p{
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.box-wrapper > .bottom{
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+}
+.box-wrapper > .top{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.movement{
+    width: 80%;
+    margin: 100px auto;
+}
+
+.movement > h3{
+    font-size: 3rem;
+    color:red;
+    padding: 10px;
+}
+.movement > p{
+    font-size: 2rem;
+    color:#000;
+    padding: 10px;
+}
+.movement > ul{
+    width:100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+.movement > ul > li{
+    width:45%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 25px;
+    border: 3px solid red;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(0); /* reset before animation */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease forwards;
+  }
+@media screen and (max-width: 768px) {
+    .story {
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+    }
+  
+    .story-content,
+    .story-img {
+      width: 100%;
+      margin: 0;
+    }
+  
+    .story-content > h3 {
+      font-size: 2.5rem;
+    }
+  
+    .story-content > p,
+    .story-content > h4 {
+      font-size: 1.6rem;
+    }
+  
+    .mission,
+    .vision,
+    .partnership,
+    .network,
+    .movement {
+      width: 95%;
+      margin: 30px auto;
+    }
+  
+    .mission > ul,
+    .partnership > ul {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .mission > ul > li,
+    .partnership > ul > li {
+      width: 90%;
+      font-size: 1.6rem;
+    }
+  
+    .vision > h3,
+    .partnership > h3,
+    .mission > h3,
+    .network > h2,
+    section > h2,
+    .movement > h3 {
+      font-size: 2.5rem;
+    }
+  
+    .vision > p,
+    .movement > p {
+      font-size: 1.6rem;
+    }
+  
+    .boxes {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .box-wrapper {
+      width: 90%;
+      height: auto;
+      position: relative;
+    }
+  
+    .box {
+      position: static;
+      transform: rotate(0deg);
+      margin: 10px auto;
+      width: 100px;
+      height: 100px;
+    }
+  
+    .text {
+      transform: none;
+      font-size: 2rem;
+    }
+  
+    .box-content > h3 {
+      font-size: 1.8rem;
+    }
+  
+    .box-content > p {
+      font-size: 1.1rem;
+    }
+  
+    .movement > ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .movement > ul > li {
+      width: 90%;
+      font-size: 1.6rem;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  

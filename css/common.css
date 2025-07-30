@@ -1,0 +1,33 @@
+/* Global box sizing and font */
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.37, 1.14, 0.26, 1.24);
+  }
+  
+  /* Root settings */
+  html {
+    font-size: 62.5%; /* Makes 1rem = 10px for easy scaling */
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+    font-family: sans-serif;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.4rem; /* equals 14px based on 62.5% html */
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    text-align: left;
+  }
+  

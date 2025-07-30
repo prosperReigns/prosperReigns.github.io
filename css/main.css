@@ -1,0 +1,502 @@
+main > .write-up{
+    width: 50%;
+    border: 1px solid blue;
+}
+
+main >.write-up > h2{
+    color: red;
+    padding: 15px 25px;
+    font-size: 4.5rem;
+}
+main >.write-up> p{
+    padding: 15px 25px;
+    font-size: 2rem;
+}
+
+main > .video-coverage{
+    width: 45%;
+    height: 500px;
+    border: 1px solid red;
+    flex: 1;
+}
+
+.food-pack-image{
+    margin-top: 100px;
+    width: 80%;
+    height: 500px;
+    position: relative;
+    margin:10px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.img{
+    width: 350px;
+    height: 400px;
+    background: #ccc;
+    transform: rotate(45deg);
+    transition: transform 1s ease-in-out;
+
+}
+/* When in view, rotate to 180deg */
+.img.rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  /* Return to 45deg */
+  .img.back-to-45 {
+    transform: rotate(45deg);
+  }
+.food-pack-image >.one{
+    border: 1px solid blue;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 50%;
+    bottom: 10%;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    box-shadow:x -2px 5px hsla(100, 50%, 0%, 0.75);
+}
+.food-pack-image >.two{
+    border: 1px solid red;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 3px -2px 5px hsla(100, 50%, 0%, 0.75);
+}
+/* Rotate to 180deg */
+.img.rotate-180 {
+    transform: rotate(180deg) !important;
+  }
+  
+  /* Back to original (based on individual default rotation) */
+  .food-pack-image > .one.back-to-45 {
+    transform: rotate(-45deg) !important;
+  }
+  
+  .food-pack-image > .two.back-to-45 {
+    transform: rotate(45deg) !important;
+  }
+
+section{
+    width:100%;
+    margin-top: 100px;
+}
+.food-pack-theme{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.food-pack-benefit{
+    width: 45%;
+    margin-left: 30px;
+}
+
+.food-pack-benefit > h2{
+    font-size: 4.5rem;
+    color: red;
+    padding: 10px;
+    text-align: center;
+}
+.food-pack-benefit > p, span{
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+.food-pack-benefit > ul{
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.food-pack-benefit ul > li{
+   padding: 10px;
+   font-size: 1.8rem;
+}
+
+.line{
+    width: 2px;
+    border: 3px solid #000;
+    height: 400px;
+}
+.food-pack-content{
+    width: 45%;
+    margin-right: 30px;
+}
+
+.food-pack-content > h3{
+   font-size: 3rem;
+   padding: 10px;
+}
+
+.food-pack-content > ul > li{
+   padding: 10px;
+   font-size: 2rem;
+   margin-left: 50px;
+   line-height: 1.2;
+}
+
+.food-pack-action{
+    width: 60%;
+    margin: 50px auto;
+    border: 1px solid green;
+}
+.food-pack-action >ul{
+    border: 1px solid blue;
+    list-style-type: none;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.food-pack-action > ul >li{
+    width: 250px;
+    padding:10px;
+    background-color: green;
+    border-radius: 7px;
+    text-align: center;
+    margin-block: 10px;
+}
+.food-pack-action li>a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    
+}
+
+/* Initial hidden state */
+.slide-from-left,
+.slide-from-right,
+.slide-from-bottom {
+  opacity: 0;
+  transform: translateX(0) translateY(0);
+  transition: all 0.8s ease-out;
+}
+
+/* Animate from left */
+.slide-from-left.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slide-from-left {
+  transform: translateX(-100px);
+}
+
+/* Animate from right */
+.slide-from-right.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slide-from-right {
+  transform: translateX(100px);
+}
+
+/* Animate from bottom */
+.slide-from-bottom.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-from-bottom {
+  transform: translateY(100px);
+}
+
+article{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.model{
+    width: 80%;
+    margin-inline: auto;
+}
+.model > h2{
+    font-size: 4.5rem;
+    color: red;
+}
+.model > p{
+    padding: 10px;
+    color: #000;
+    font-size: 2rem;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    font-size: 2rem;
+    border: 1px solid blue;
+    position: relative;
+    margin: 25px 0;
+    background: #fff;
+    transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  transform: rotateY(180deg); /* initial flipped state */
+  opacity: 0;
+}
+
+.card.animate {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+
+.card > p{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.challange{
+    width: 80%;
+    margin-inline: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+}
+
+.challange.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+.challange >h2{
+    font-size: 4.5rem;
+    color: red;
+}
+.challange >p{
+    padding: 10px;
+    color: #000;
+    font-size: 2rem;
+}
+
+.challange >ul{
+  list-style-type: none;
+  width: 100%;
+  height: 350px;
+}
+
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+  }
+  
+  .carousel li {
+    flex: 0 0 80%;
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-height: 150px; /* optional, for better visual spacing */
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel {
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+.challange-action{
+    width: 60%;
+    margin: 10px auto;
+}
+.challange-action > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.challange-action ul > li{
+    width: 200px;
+    background-color: green;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: center;
+}
+.challange-action ul > li >a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    
+    color: #fff;
+}
+
+aside{
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop-img{
+    width: 45%;
+    height: 500px;
+    max-height: 500px;
+    margin-left: 25px;
+    border: 1px solid red;;
+}
+.shop-content{
+    width: 45%;
+    margin-right: 25px;
+}
+.shop-content > h2{
+    font-size: 4.5rem;
+    padding: 10px;
+    color: red;
+}
+.shop-content > p{
+    font-size: 2rem;
+    padding: 10px;
+    color: black;
+}
+.shop-content > ul{
+    list-style-type: none;
+}
+.shop-content > ul>h3{
+    font-size: 3rem;
+    padding: 10px;
+    color: blue;
+}
+.shop-content > ul>li{
+    width: 100%;
+    font-size: 2rem;
+    padding: 10px;
+    color: black;
+}
+
+.shop-action{
+    width: 60%;
+    margin:20px auto;
+    background-color: green;
+    border-radius: 10px;
+}
+.shop-action > button{
+    width: 100%;
+    padding:10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    main,
+    .food-pack-image,
+    .food-pack-theme,
+    .food-pack-action,
+    .cards,
+    .challange-action,
+    aside,
+    .shop-action {
+      flex-direction: column;
+      width: 90%;
+      margin: 50px auto;
+      gap: 20px;
+      align-items: center;
+    }
+  
+    main > .write-up,
+    main > .video-coverage,
+    .food-pack-benefit,
+    .food-pack-content,
+    .shop-img,
+    .shop-content {
+      width: 100%;
+    }
+  
+    main > .write-up > h2,
+    .food-pack-benefit > h2,
+    .model > h2,
+    .shop-content > h2,
+    .challange > h2 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  
+    main > .write-up > p,
+    .food-pack-benefit > p,
+    .food-pack-content > ul > li,
+    .model > p,
+    .challange > p,
+    .shop-content > p,
+    .shop-content > ul > li {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .food-pack-benefit > ul,
+    .food-pack-content > ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .line {
+      display: none; /* Hide divider on small screens */
+    }
+  
+    .carousel li {
+      flex: 0 0 90%; /* Slightly more width on smaller screens */
+    }
+  
+    .card {
+      width: 90%;
+      height: auto;
+    }
+  
+    .shop-action > button {
+      font-size: 1.2rem;
+    }
+  
+    .challange-action ul,
+    .food-pack-action > ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .challange-action ul > li,
+    .food-pack-action ul > li {
+      width: 100%;
+    }
+  
+    .img {
+      width: 250px;
+      height: 300px;
+    }
+  }
+  
