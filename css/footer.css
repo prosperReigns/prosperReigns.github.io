@@ -1,5 +1,9 @@
+:root{
+  --bg-secondary: #a49e9e;
+  --bg-white: #fff;
+}
 footer{
-    background-color: #000;
+    background-color: var(--bg-secondary);
 }
 .company, .quick-links, .social{
     width: 50%;
@@ -11,26 +15,28 @@ footer{
 
 .company > h3{
     font-size: 3rem;
-    color: #fff;
+    color: var(--bg-white);
     padding: 20px;
+    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
 }
 
 .company > p{
-    color: #fff;
+    color: var(--bg-white);
     padding: 20px;
 }
 .company >p> span{
     display: block;
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--bg-white);
     padding: 20px 0;
     text-align: left;
 }   
 
 .quick-links > h3{
     font-size: 3rem;
-    color: #fff;
+    color:var(--bg-white);
     padding: 20px;
+    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
 }
 .quick-links > ul{
     /* margin-top: 20px; */
@@ -42,13 +48,14 @@ footer{
 }
 .quick-links > ul >li> a{
     padding: 20px 10px;
-    color: #fff;
+    color: var(--bg-white);
     font-size: 1.5rem;
 }
 .social > h3{
     font-size: 3rem;
-    color: #fff;
+    color: var(--bg-white);
     padding: 20px;
+    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
 }
 
 .copyright{
@@ -59,7 +66,8 @@ footer{
     text-align: center;
     font-size: 1.5rem;
     padding: 10px;
-    color: #fff;
+    color: var(--bg-white);
+    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
 }
 @media screen and (max-width: 768px) {
     .company,

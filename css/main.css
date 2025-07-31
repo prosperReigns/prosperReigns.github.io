@@ -1,12 +1,22 @@
+:root{
+  --burnt-orange: #ff7034;
+  --bg-primary: #fffff0;
+  --bg-secondary: #a49e9e;
+  --bg-light: #fff44f;
+  --base-font: 1rem;
+  --fong-md: 1.5rem;
+  --font-lg: 4.5rem;
+}
+
 main > .write-up{
     width: 50%;
-    border: 1px solid blue;
 }
 
 main >.write-up > h2{
-    color: red;
+    color: var(--burnt-orange);
     padding: 15px 25px;
     font-size: 4.5rem;
+    text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
 }
 main >.write-up> p{
     padding: 15px 25px;
@@ -15,9 +25,14 @@ main >.write-up> p{
 
 main > .video-coverage{
     width: 45%;
-    height: 500px;
-    border: 1px solid red;
+    height: 700px;
     flex: 1;
+}
+
+.video-coverage > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .food-pack-image{
@@ -38,6 +53,12 @@ main > .video-coverage{
     transition: transform 1s ease-in-out;
 
 }
+.img > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* When in view, rotate to 180deg */
 .img.rotate-180 {
     transform: rotate(180deg);
@@ -48,17 +69,15 @@ main > .video-coverage{
     transform: rotate(45deg);
   }
 .food-pack-image >.one{
-    border: 1px solid blue;
     transform: rotate(-45deg);
     position: absolute;
     right: 50%;
     bottom: 10%;
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
-    box-shadow:x -2px 5px hsla(100, 50%, 0%, 0.75);
+    box-shadow:3px -2px 5px hsla(100, 50%, 0%, 0.75);
 }
 .food-pack-image >.two{
-    border: 1px solid red;
     transform: rotate(45deg);
     position: absolute;
     left: 50%;
@@ -81,6 +100,17 @@ main > .video-coverage{
     transform: rotate(45deg) !important;
   }
 
+  .food-pack-image >.one > img{
+    transform: rotate(0deg);
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
+  .food-pack-image >.two > img{
+    transform: rotate(0deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+
 section{
     width:100%;
     margin-top: 100px;
@@ -101,40 +131,52 @@ section{
 
 .food-pack-benefit > h2{
     font-size: 4.5rem;
-    color: red;
+    color:var(--burnt-orange);
     padding: 10px;
     text-align: center;
+    text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
 }
 .food-pack-benefit > p, span{
     padding: 10px;
     font-size: 2rem;
     text-align: center;
 }
+.food-pack-benefit > span > a{
+    font-size: 2rem;
+    color: green
+}
 .food-pack-benefit > ul{
-    width: 80%;
+    width: 100%;
     margin: 10px auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     list-style-type: none;
 }
 .food-pack-benefit ul > li{
    padding: 10px;
-   font-size: 1.8rem;
+   font-size: 2rem;
+  background-color: var(--burnt-orange);
+  color:#fff;
+  margin-left: 7px;
+  border-radius: 10px;
 }
 
 .line{
     width: 2px;
-    border: 3px solid #000;
+    border: 3px solid var(--bg-secondary);
     height: 400px;
 }
 .food-pack-content{
     width: 45%;
     margin-right: 30px;
+    background-color: var(--bg-secondary);
 }
 
 .food-pack-content > h3{
    font-size: 3rem;
    padding: 10px;
+   color: #fff;
 }
 
 .food-pack-content > ul > li{
@@ -142,12 +184,15 @@ section{
    font-size: 2rem;
    margin-left: 50px;
    line-height: 1.2;
+   color: #fff;
 }
 
 .food-pack-action{
     width: 60%;
     margin: 50px auto;
     border: 1px solid green;
+    border-radius: 10px;
+    box-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
 }
 .food-pack-action >ul{
     border: 1px solid blue;
@@ -156,14 +201,23 @@ section{
     margin-inline: auto;
     display: flex;
     justify-content: space-evenly;
+    border-radius: 10px;
 }
 .food-pack-action > ul >li{
     width: 250px;
     padding:10px;
-    background-color: green;
+    background-color: var(--burnt-orange);
     border-radius: 7px;
     text-align: center;
     margin-block: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.food-pack-action ul li:hover {
+  transform: scale(1.09); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .food-pack-action li>a{
     color: #fff;
@@ -211,6 +265,7 @@ section{
 article{
     width: 100%;
     margin-top: 100px;
+    background-color: var(--bg-primary);
 }
 
 .model{
@@ -219,7 +274,8 @@ article{
 }
 .model > h2{
     font-size: 4.5rem;
-    color: red;
+    color: var(--burnt-orange);
+    text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
 }
 .model > p{
     padding: 10px;
@@ -240,7 +296,6 @@ article{
     height: 300px;
     border-radius: 7px;
     font-size: 2rem;
-    border: 1px solid blue;
     position: relative;
     margin: 25px 0;
     background: #fff;
@@ -248,6 +303,7 @@ article{
   transition: transform 0.8s ease;
   transform: rotateY(180deg); /* initial flipped state */
   opacity: 0;
+  box-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
 }
 
 .card.animate {
@@ -255,12 +311,18 @@ article{
     opacity: 1;
   }
 
+.card >img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 .card > p{
     width: 100%;
     height: 50px;
     position: absolute;
     bottom: 0;
-    background-color: #333;
+    background-color: #333333;
     text-align: center;
     padding-top: 10px;
     color: #fff;
@@ -272,6 +334,7 @@ article{
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s ease-in-out;
+    
 }
 
 .challange.show {
@@ -280,7 +343,8 @@ article{
   }
 .challange >h2{
     font-size: 4.5rem;
-    color: red;
+    color: var(--burnt-orange);
+    text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
 }
 .challange >p{
     padding: 10px;
@@ -290,8 +354,13 @@ article{
 
 .challange >ul{
   list-style-type: none;
-  width: 100%;
+  width: 80%;
   height: 350px;
+  margin-inline: auto;
+  border-left: 1px solid var(--bg-secondary);
+  border-bottom: 1px solid var(--bg-secondary);
+  border-bottom-left-radius: 10px;
+  background-color:#ff7034;
 }
 
 
@@ -299,37 +368,65 @@ article{
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 10px;
+    /* gap: 20px; */
+    /* padding: 10px; */
     list-style: none;
     margin: 0;
     padding-left: 0;
     scroll-behavior: smooth;
     white-space: nowrap;
-  scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; /* Firefox */
   }
   
   .carousel li {
     flex: 0 0 80%;
-    background: #f2f2f2;
-    padding: 20px;
+    /* background: var(--bg-light); */
+    /* padding: 20px; */
     border-radius: 10px;
     scroll-snap-align: start;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    min-height: 150px; /* optional, for better visual spacing */
+    min-height: 150px;
+    border-left: 2px solid #000;
+    position:relative;
   }
 
+  .carousel li span{
+    position: absolute;
+    bottom: 10px;
+    left:700px;
+    font-size: 2rem;
+    z-index: 10;
+    color: var(--bg-light);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px hsla(100, 50%, 0%, 0.75);
+  }
   .carousel::-webkit-scrollbar {
     display: none;
   }
   
+  .pic-1{
+    background-image: url('/foodsurplus/save.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .pic-2{
+    background-image: url('/foodsurplus/winnings.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .pic-3{
+    /* background-color: #ccc; */
+    background-image: url('/foodsurplus/community.png');
+    background-size: cover;
+    background-position: center;
+  }
   .carousel {
     -ms-overflow-style: none;  /* IE/Edge */
     scrollbar-width: none;     /* Firefox */
   }
 .challange-action{
     width: 60%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 .challange-action > ul{
     list-style-type: none;
@@ -339,10 +436,18 @@ article{
 }
 .challange-action ul > li{
     width: 200px;
-    background-color: green;
+    background-color: var(--burnt-orange);;
     border-radius: 7px;
     padding: 10px;
     text-align: center;
+    box-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.challange-action ul > li:hover{
+  transform: scale(1.09); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .challange-action ul > li >a {
     text-decoration: none;
@@ -353,6 +458,10 @@ article{
 }
 
 aside{
+  width: 100%;
+  background-color: var(--bg-secondary);
+}
+.shop-wrapper{
     width: 80%;
     margin: 100px auto;
     display: flex;
@@ -366,7 +475,13 @@ aside{
     height: 500px;
     max-height: 500px;
     margin-left: 25px;
-    border: 1px solid red;;
+}
+
+.shop-img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .shop-content{
     width: 45%;
@@ -375,12 +490,13 @@ aside{
 .shop-content > h2{
     font-size: 4.5rem;
     padding: 10px;
-    color: red;
+    color: var(--burnt-orange);
+    text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
 }
 .shop-content > p{
     font-size: 2rem;
     padding: 10px;
-    color: black;
+    color: #fff;
 }
 .shop-content > ul{
     list-style-type: none;
@@ -388,20 +504,28 @@ aside{
 .shop-content > ul>h3{
     font-size: 3rem;
     padding: 10px;
-    color: blue;
+    color: var(--bg-light);
 }
 .shop-content > ul>li{
     width: 100%;
     font-size: 2rem;
     padding: 10px;
-    color: black;
+    color: #fff;
 }
 
 .shop-action{
     width: 60%;
     margin:20px auto;
-    background-color: green;
+    background-color: var(--burnt-orange);;
     border-radius: 10px;
+    box-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.shop-action:hover {
+  transform: scale(1.09); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .shop-action > button{
     width: 100%;
@@ -412,14 +536,25 @@ aside{
     background: transparent;
     font-size: 1.5rem;
     border-radius: 10px;
+    color:#fff;
 }
 
+.ads{
+  width: 40%;
+  margin: 10px auto;
+  height: 1200px;
+}
+
+.ads > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media screen and (max-width: 768px) {
     main,
     .food-pack-image,
     .food-pack-theme,
-    .food-pack-action,
     .cards,
     .challange-action,
     aside,
@@ -457,19 +592,31 @@ aside{
     .shop-content > p,
     .shop-content > ul > li {
       font-size: 1.5rem;
-      text-align: center;
+      /* text-align: center; */
     }
-  
+  header img{
+      object-fit: cover;
+  }
     .food-pack-benefit > ul,
     .food-pack-content > ul {
       flex-direction: column;
       align-items: flex-start;
     }
   
+    .food-pack-benefit{
+      margin-left: 0;
+    }
+    .food-pack-benefit > ul > li{
+      width: 100%;
+      font-size: 1.5rem;
+      margin: 5px 0;
+    }
     .line {
       display: none; /* Hide divider on small screens */
     }
-  
+    .food-pack-content {
+      margin-left: 30px
+    }
     .carousel li {
       flex: 0 0 90%; /* Slightly more width on smaller screens */
     }
@@ -479,6 +626,26 @@ aside{
       height: auto;
     }
   
+    .shop-wrapper{
+      flex-direction: column;
+    }
+    .shop-img{
+      width: 100%;
+      margin-left:0;
+      height: 300px;
+    }
+    .shop-img img{
+      object-fit: contain;
+    }
+    .shop-content{
+      text-align: left;
+    }
+    .shop-content ul h3{
+      font-size: 1.8rem;
+    }
+    .shop-action{
+      margin-left: 30px;
+    }
     .shop-action > button {
       font-size: 1.2rem;
     }
@@ -497,6 +664,11 @@ aside{
     .img {
       width: 250px;
       height: 300px;
+    }
+
+    .ads{
+      width: 90%;
+      object-fit: cover;
     }
   }
   
