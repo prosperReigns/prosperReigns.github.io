@@ -49,7 +49,7 @@ main > .video-coverage{
     width: 350px;
     height: 400px;
     background: #ccc;
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
     transition: transform 1s ease-in-out;
 
 }
@@ -59,61 +59,79 @@ main > .video-coverage{
   object-fit: cover;
 }
 
-/* When in view, rotate to 180deg */
-.img.rotate-180 {
-    transform: rotate(180deg);
-  }
-  
-  /* Return to 45deg */
-  .img.back-to-45 {
-    transform: rotate(45deg);
-  }
-.food-pack-image >.one{
-    transform: rotate(-45deg);
-    position: absolute;
-    right: 50%;
-    bottom: 10%;
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
-    box-shadow:3px -2px 5px hsla(100, 50%, 0%, 0.75);
-}
-.food-pack-image >.two{
-    transform: rotate(45deg);
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    border-top-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-    box-shadow: 3px -2px 5px hsla(100, 50%, 0%, 0.75);
-}
-/* Rotate to 180deg */
-.img.rotate-180 {
-    transform: rotate(180deg) !important;
-  }
-  
-  /* Back to original (based on individual default rotation) */
-  .food-pack-image > .one.back-to-45 {
-    transform: rotate(-45deg) !important;
-  }
-  
-  .food-pack-image > .two.back-to-45 {
-    transform: rotate(45deg) !important;
-  }
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between service boxes */
+  margin: 30px auto;
+  width: 80%;
 
-  .food-pack-image >.one > img{
-    transform: rotate(0deg);
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
-  }
-  .food-pack-image >.two > img{
-    transform: rotate(0deg);
-    border-top-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-  }
+}
+
+.service {
+  flex: 1 1 calc(50% - 20px); /* Two per row with gap */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.service h3{
+  font-size:3rem;
+  color: var(--burnt-orange);
+  
+}
+
+.bot{
+  margin-bottom: 20px;
+}
+.service p{
+  font-size:2rem;
+  color:#fff;
+
+}
+.service ul{
+  list-style-type: none;
+  margin-top: 20px;
+
+}
+.service ul li{
+  padding-top: 10px;
+}
+/* Optional: Style buttons */
+.btn {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  background-color: var(--burnt-orange);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn button:hover {
+  background-color: var(--burnt-orange);
+}
 
 section{
     width:100%;
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+section h1{
+    text-align: center;
+    width: 100%;
+    /* padding:20px; */
+    color: var(--burnt-orange);
+    font-size: 4.5rem;
 }
 .food-pack-theme{
     width: 80%;
@@ -143,7 +161,7 @@ section{
 }
 .food-pack-benefit > span > a{
     font-size: 2rem;
-    color: green
+    color: var(--burnt-orange);
 }
 .food-pack-benefit > ul{
     width: 100%;
@@ -190,12 +208,10 @@ section{
 .food-pack-action{
     width: 60%;
     margin: 50px auto;
-    border: 1px solid green;
     border-radius: 10px;
     box-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
 }
 .food-pack-action >ul{
-    border: 1px solid blue;
     list-style-type: none;
     width: 100%;
     margin-inline: auto;
@@ -326,6 +342,43 @@ article{
     text-align: center;
     padding-top: 10px;
     color: #fff;
+}
+
+.metrix {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.metrix h2{
+  color: var(--burnt-orange);
+  font-size: 4.5rem;
+}
+
+.metrix-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.metrix-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metrix-table ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.metrix-table li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .challange{
@@ -461,6 +514,19 @@ aside{
   width: 100%;
   background-color: var(--bg-secondary);
 }
+aside h2{
+    font-size: 4.5rem;
+    color: var(--burnt-orange);
+    text-align: center;
+    padding: 10px;
+    text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
+}
+aside p{
+    font-size: 2rem;
+    padding: 10px;
+    color: #fff;
+}
+
 .shop-wrapper{
     width: 80%;
     margin: 100px auto;
@@ -550,7 +616,72 @@ aside{
   height: 100%;
   object-fit: cover;
 }
+section h2{
+  text-align: center;
+  font-size:4.5rem;
+}
+.benefits{
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
+.benefit{
+    width: 15%;
+    margin-left:10px;
+    font-size: 2rem;
+}
+
+.join{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap:15px;
+  justify-content: center;
+  width: 100%;
+}
+.testimonia{
+  width: 100%;
+   background-color: rgb(44, 7, 7);
+  margin-block: 20px;
+  color:#fff;
+  padding: 20px;
+}
+
+.btn{
+  width: 300px;
+}
+
+.btn button{
+  width:100%;
+  padding: 10px;
+  outline: 0;
+}
+.testimonia ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+.testimonia H2{
+  font-size: 4.5rem;
+  color: var(--burnt-orange);
+  text-align: center;
+  padding: 10px;
+  text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
+}
+.testimonia ul li{
+  width: 45%;
+  padding: 100px 25px;
+  border: 3px solid var(--burnt-orange);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 @media screen and (max-width: 768px) {
     main,
     .food-pack-image,

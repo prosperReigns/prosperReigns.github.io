@@ -1,0 +1,75 @@
+:root{
+    --burnt-orange: #ff7034;
+    --bg-primary: #fffff0;
+    --bg-secondary: #a49e9e;
+    --bg-light: #fff44f;
+    --base-font: 2rem;
+    --fong-md: 3rem;
+    --font-lg: 4.5rem;
+  }
+
+body{
+    background-image: url("/foodsurplus/20250728_031014.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #333;
+    backdrop-filter: blur(10px);
+}
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--bg-primary);
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    padding-top: 100px
+};
+
+.heading{
+    text-align: center;
+    width: 100%;
+    padding:30px;
+    color: #ff7034;
+    font-size: 4.5rem;
+}
+
+h2{
+    font-size: 3rem;
+    padding: 20px;
+    color: var(--burnt-orange);
+    margin-left: 20px;
+}
+
+p{
+    font-size: var(--base-font);
+    padding: 20px;
+    color: #000000;
+    margin-left: 40px;
+}
+
+span{
+    font-size: 2.5rem;
+    color: var(--bg-light);
+    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
+}
+ul li{
+    font-size: var(--base-font);
+    padding: 20px;
+    color: #000000;
+    margin-left: 100px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        width: 90%;
+    };
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+}

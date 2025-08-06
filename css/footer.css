@@ -2,9 +2,12 @@
   --bg-secondary: #a49e9e;
   --bg-white: #fff;
 }
-footer{
-    background-color: var(--bg-secondary);
-}
+ footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #a49e9e;
+      color: #fff;
+    }
 .company, .quick-links, .social{
     width: 50%;
     margin: 10px 200px;

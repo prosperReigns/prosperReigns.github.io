@@ -3,9 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="/css/abouts.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>About Us</title>
+    <style>
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #000;
+        /* position: fixed; */
+        z-index: 1000;
+    }
+
+    .ceo-card {
+      background: white;
+      width: 100%;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 15px;
+    }
+
+    .ceo-img{
+        width: 45%;
+        height: 550px;
+    }
+
+     .ceo-img img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+     }
+
+    .ceo-content{
+        width: 50%;
+    }
+
+    .ceo-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .ceo-header h2 {
+      margin: 0;
+      color: #006400;
+    }
+
+    .ceo-title {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .ceo-body p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .ceo-body ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .toggle-btn {
+      display: inline-block;
+      background: #ff7034;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      margin-left: 25px;
+    }
+
+    .ceo-contact {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .call-btn {
+      background: #ff7034;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #a49e9e;
+      color: #fff;
+    }
+    h1{
+        text-align: center;
+        font-size: 4.5rem;
+        color: #ff7034;
+    }
+    </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo"><img src="foodsurplus/IMG-20250729-WA0002.jpg">FOODSURPLUS</div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/product.html">Product</a></li>
+          <li><a href="/join.html">join Us</a></li>
+          <li><a href="/hiw.html ">How it works</a></li>
+          <!-- <li><a href="/Join Us.html">Join us</a></li> -->
+          <!-- <li><a href="/contact.html">Contact Us</a></li> -->
+        </ul>
+        <div class="navBtn"><button>Download</button></div>
+      </nav>
 
+    <div class="wrapper">
+        <h1 class="heading">About Us</h1>
+        <h2>Who we are?</h2>
+        <p><span>FOODSURPLUS</span> Nigeria is a revolutionary foodstuff supply chain platform connecting farmers, processors, wholesalers, and neighborhood consumers through a reliable, affordable, and fast distribution network. We are on a mission to ensure that every household—no matter the income level—has access to quality food at fair prices.</p>
+
+        <p>With a deep understanding of Nigeria’s food supply gaps and retail needs, <span>FOODSURPLUS</span> is bridging the disconnect between surplus production and urban demand. Our network of local stockists, warehouse partners, delivery agents, and neighborhood shop owners ensures no community is left behind in the journey to food security.</p>
+
+        <h2>Our Vision</h2>
+        <p>To become Nigeria’s most impactful and inclusive food distribution network—ensuring access, affordability, and dignity in food consumption for all.</p>
+
+        <h2>Our Mission</h2>
+        <ul>
+            <li>To reduce food wastage and bridge rural-urban food movement</li>
+            <li>To empower small-scale retailers and shop owners through our FOODSURPLUS franchise model</li>
+            <li>To create affordable food bundles that meet family needs with dignity</li>
+            <li>To enable millions of Nigerians to eat better, spend less, and support local supply chains</li>
+        </ul>
+
+        <h2>Our Story</h2>
+        <p><span>FOODSURPLUS</span> was born from a simple yet powerful insight: too many Nigerians go hungry while food rots in surplus at the farm level or in warehouses. Our CEO, [Insert CEO’s Name], once watched a widow in a Lagos market struggle to afford yams while the same produce was being wasted in Benue.</p>
+
+        <div class="ceo-card">
+        <div class="ceo-img"><img src="foodsurplus/IMG-20250802-WA0006.jpg"></div>
+        <div class="ceo-content">
+              <div class="ceo-header">
+      <h2>About Our CEO</h2>
+      <p class="ceo-title">Chibuogwu Benson-Oraelosi</p>
+      <p>Founder & Chief Executive Officer, FOODSURPLUS Nigeria</p>
+              </div>
+
+    <div class="ceo-body">
+      <p>Chibuogwu Benson-Oraelosi is a visionary entrepreneur and humanitarian with over two decades of experience in food retail and community-based economic empowerment. Her journey began in 2006 with the launch of Convenient Foodmart — the first one-stop shop in Nigeria dedicated solely to foodstuffs.</p>
+
+      <p>Rather than building for personal profit, she created a model that fosters shared prosperity — benefiting farmers, producers, shop owners, and consumers alike.</p>
+
+      <button class="toggle-btn" onclick="toggleMore()">Read More</button>
+
+      <div id="more-info" class="hidden">
+        <p>This vision culminated in the official registration of FOODSURPLUS Nigeria on May 7th, 2019 — transforming from a retail outlet into a nationwide food empowerment movement.</p>
+
+        <p>FOODSURPLUS allows:</p>
+        <ul>
+          <li>Farmers to sell at fair value</li>
+          <li>Producers to reach new markets</li>
+          <li>Neighborhood shops to earn more</li>
+          <li>Consumers to access food affordably</li>
+          <li>Everyday Nigerians to build income as stakeholders</li>
+        </ul>
+
+        <p>Chibuogwu believes in a food economy that works for everyone — powered by technology, trust, and transparency. She continues to lead FOODSURPLUS with humility, integrity, and commitment to a hunger-free Nigeria.</p>
+      </div>
+    </div>
+
+    <div class="ceo-contact">
+      <a href="tel:08075994444" class="call-btn">📞 Call: 0807 599 4444</a>
+    </div>
+
+
+        </div>
+        </div>
+    </div>
+
+    
+     <footer>
+    💡 Together, we’re building Nigeria’s largest food supply chain — one neighborhood at a time.
+    <br>
+    <strong>Partner with FOODSURPLUS today and turn your shop into a profit center for food security.</strong>
+    💬 FOODSURPLUS: <strong>“Saving More. Feeding Better. Together.”</strong><br/>
+    📞 08075994444 | 🌍 www.foodsurplus.ng
+  </footer>
+
+    <script src="js/navbar.js"></script>
+    <script>
+    function toggleMore() {
+      const moreInfo = document.getElementById("more-info");
+      const button = document.querySelector(".toggle-btn");
+      if (moreInfo.classList.contains("hidden")) {
+        moreInfo.classList.remove("hidden");
+        button.textContent = "Show Less";
+      } else {
+        moreInfo.classList.add("hidden");
+        button.textContent = "Read More";
+      }
+    }
+  </script>
 </body>
 <html>
