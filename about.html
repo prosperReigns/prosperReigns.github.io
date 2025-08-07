@@ -113,6 +113,25 @@
         font-size: 4.5rem;
         color: #ff7034;
     }
+    
+    @media screen and (max-width: 768px) {
+        .ceo-card{
+        flex-direction: column;
+          text-align: left;
+    }
+    .ceo-img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .ceo-img img{
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+    .ceo-content{
+        width: 100%;
+    }
+    }
     </style>
 </head>
 <body>
@@ -121,11 +140,8 @@
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
         <ul class="nav-links" id="navLinks">
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/product.html">Product</a></li>
           <li><a href="/join.html">join Us</a></li>
           <li><a href="/hiw.html ">How it works</a></li>
-          <!-- <li><a href="/Join Us.html">Join us</a></li> -->
-          <!-- <li><a href="/contact.html">Contact Us</a></li> -->
         </ul>
         <div class="navBtn"><button>Download</button></div>
       </nav>
@@ -154,7 +170,7 @@
         <div class="ceo-card">
         <div class="ceo-img"><img src="foodsurplus/IMG-20250802-WA0006.jpg"></div>
         <div class="ceo-content">
-              <div class="ceo-header">
+    <div class="ceo-header">
       <h2>About Our CEO</h2>
       <p class="ceo-title">Chibuogwu Benson-Oraelosi</p>
       <p>Founder & Chief Executive Officer, FOODSURPLUS Nigeria</p>
@@ -186,8 +202,6 @@
     <div class="ceo-contact">
       <a href="tel:08075994444" class="call-btn">📞 Call: 0807 599 4444</a>
     </div>
-
-
         </div>
         </div>
     </div>

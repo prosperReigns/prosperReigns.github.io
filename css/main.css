@@ -667,7 +667,7 @@ section h2{
   justify-content: space-evenly;
   gap: 15px;
 }
-.testimonia H2{
+.testimonia h2{
   font-size: 4.5rem;
   color: var(--burnt-orange);
   text-align: center;
@@ -676,12 +676,13 @@ section h2{
 }
 .testimonia ul li{
   width: 45%;
-  padding: 100px 25px;
+  padding: 80px 25px;
   border: 3px solid var(--burnt-orange);
-  display: flex;
+  /* display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center; */
 }
+
 @media screen and (max-width: 768px) {
     main,
     .food-pack-image,
@@ -696,7 +697,11 @@ section h2{
       gap: 20px;
       align-items: center;
     }
-  
+  .food-pack-image{
+    padding-top: 100px;
+    z-index: -1;
+    opacity: 0.75;
+  }
     main > .write-up,
     main > .video-coverage,
     .food-pack-benefit,
@@ -800,6 +805,40 @@ section h2{
     .ads{
       width: 90%;
       object-fit: cover;
+    }
+    .testimonia ul{
+      width: 100%;
+      flex-direction: column;
+      border: 1px solid red;
+      justify-content: start;
+    }
+    .testimonia ul li{
+      width: 100%;
+     
+    }
+    .benefits{
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .benefit{
+      width: 80%;
+      margin-left:15px;
+      display: block;
+      border: 3px solid var(--burnt-orange);
+      padding: 10px;
+      text-align: center;
+    }
+    .btn{
+      margin: 0 auto;
+    }
+    .metrix-content{
+      display: block;
+    }
+    .services{
+      display: block;
+    }
+    .service{
+      margin-top: 10px;
     }
   }
   

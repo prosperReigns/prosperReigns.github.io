@@ -354,18 +354,13 @@ text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
   
     .box-wrapper {
       width: 90%;
-      height: 200px;
-      position: relative;
-      border:1px solid blue;
+      height: 120px;
+      /* position: relative; */
+
     }
   
     .box {
-      position: static;
-      transform: rotate(0deg);
-      margin: 10px auto;
-      width: 75px;
-      height: 75px;
-      /* margin-top: 50px; */
+      display: none;
     }
   
     .text {
@@ -376,17 +371,18 @@ text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
       width: 80%;
       height: auto;
       margin: 0 auto;
-      border:1px solid blue;
+      border:3px solid var(--burnt-orange);
     }
     .box-content > h3 {
       font-size: 1.8rem;
+      padding: 10px 0;
     }
   
     .box-content > p {
       font-size: 1.1rem;
     }
   .movement{
-    padding-top: 650px; 
+    padding-top: 300px; 
   }
     .movement > ul {
       flex-direction: column;
