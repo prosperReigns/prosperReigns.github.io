@@ -201,5 +201,11 @@ nav.navbar {
     background-size: cover;
     background-color: #000;
     } */
+
+    .heading{
+      top: 0;
+      left: 0;
+      text-align: center;
+    }
   }
   
