@@ -145,7 +145,7 @@ text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
 .network{
     width: 80%;
     margin: 50px auto;
-    height: 300px;
+    height: auto;
 }
 .network >h2{
     font-size: 4.5rem;
@@ -215,7 +215,6 @@ text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
 .box-content{
     width: 80%;
     height: 20%;
-    /* background-color: #333; */
     margin-inline: auto;
     text-align: center;
 }
@@ -347,6 +346,9 @@ text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
     .partnership > ul > li{
       margin: 10px 20px;
     }
+    .network{
+      display: none;
+    }
     .boxes {
       flex-direction: column;
       gap: 20px;
@@ -355,17 +357,10 @@ text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
     .box-wrapper {
       width: 90%;
       height: 120px;
-      /* position: relative; */
-
     }
   
     .box {
       display: none;
-    }
-  
-    .text {
-      transform: none;
-      font-size: 2rem;
     }
   .box-content {
       width: 80%;
@@ -381,9 +376,6 @@ text-shadow:1px -1px 3px hsla(100, 50%, 0%, 0.75);
     .box-content > p {
       font-size: 1.1rem;
     }
-  .movement{
-    padding-top: 300px; 
-  }
     .movement > ul {
       flex-direction: column;
       gap: 15px;

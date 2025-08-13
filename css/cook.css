@@ -1,0 +1,93 @@
+.highlight{
+    background-color: orange;
+}
+section h2{
+    text-align: center;
+    font-size: 2rem;
+    color: green;
+    margin-top: 50px;
+}
+
+.item-wrapper{
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.item{
+    width: 30%;
+    
+}
+
+.item img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item h3{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.item p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    padding-bottom: 15px;
+}
+.theme{
+    width: 30%;
+}
+.theme img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.content{
+    background-color: orange;
+}
+.step{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 3px solid #000;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.step h3{
+    margin-left: 25px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: green;
+}
+
+.step p{
+    margin-left: 25px;
+    font-size: 1.2rem;
+}
+button{
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: #fff;
+    background-color: green;
+    border: 3px solid #000;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}

@@ -3,11 +3,10 @@
   --bg-primary: #fffff0;
   --bg-secondary: #a49e9e;
   --bg-light: #fff44f;
-  --base-font: 1rem;
+  --base-font: 1.2rem;
   --fong-md: 1.5rem;
-  --font-lg: 4.5rem;
+  --font-lg: 2rem;
 }
-
 main > .write-up{
     width: 50%;
 }
@@ -27,7 +26,6 @@ main > .video-coverage{
     width: 45%;
     height: 700px;
     flex: 1;
-    /* padding-top: 177.77%; 16:9 aspect ratio reversed for vertical video (9/16 = 0.5625) => 1 / 0.5625 = ~1.7777 */
   overflow: hidden;
   position: relative;
 }
@@ -43,26 +41,100 @@ main > .video-coverage{
 }
 
 .food-pack-image{
-    margin-top: 100px;
+    /* margin-top: 50px; */
     width: 80%;
-    height: 500px;
+    height: 350px;
     position: relative;
     margin:10px auto;
     display: flex;
     justify-content: center;
     gap: 50px;
+    padding-top: 10px;
 }
 .img{
-    width: 350px;
-    height: 400px;
-    background: #ccc;
+  border: 2px solid #ccc;
+    width: 250px;
+    height: 300px;
+    background: #fff;
     border-radius: 10px;
     /* transform: rotate(45deg); */
     transition: transform 1s ease-in-out;
 
 }
 .img > img{
+  margin-top: 25px;
+  margin-left:25px;
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.food-pack-image p{
+  text-align: center;
+  color: var(--burnt-orange);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.img small{
+  margin-left: 100px;
+  color: #000;
+  font-size: 1rem;
+}
+.ingrident-wrapper{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center ;
+  margin: 50px auto;
+  gap: 50px;
+}
+
+.ingrident{
+margin-top: 25px;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+} 
+
+.ingrident img{
+  width:100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  
+}
+
+.mid{
   width: 100%;
+  height: 350px;
+}
+
+.mid img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+section img{
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+.food-wrapper{
+  border: 1px solid red;
+  width: 80%;
+  margin: 0 auto;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.food-wrapper img{
+  padding: 10px;
+  width: 500px;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -89,7 +161,6 @@ main > .video-coverage{
 .service h3{
   font-size:3rem;
   color: var(--burnt-orange);
-  
 }
 
 .bot{
@@ -133,12 +204,17 @@ main > .video-coverage{
 section{
     width:100%;
 }
+section small{
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #ff7034;
+}
 
 section h1{
     text-align: center;
     width: 100%;
     color: var(--burnt-orange);
-    font-size: 4.5rem;
+    font-size: 2rem;
 }
 .food-pack-theme{
     width: 80%;
@@ -287,7 +363,7 @@ section h1{
 
 article{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: var(--bg-primary);
 }
 
@@ -364,7 +440,7 @@ article{
 
 .metrix-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 30px;
   margin-bottom: 20px;
 }
@@ -424,7 +500,7 @@ article{
 }
 
 
-.carousel {
+/*.carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -433,7 +509,7 @@ article{
     padding-left: 0;
     scroll-behavior: smooth;
     white-space: nowrap;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; /* Firefox 
   }
   
   .carousel li {
@@ -471,15 +547,15 @@ article{
     background-position: center;
   }
   .pic-3{
-    /* background-color: #ccc; */
+    /* background-color: #ccc; 
     background-image: url('/foodsurplus/community.png');
     background-size: cover;
     background-position: center;
   }
   .carousel {
-    -ms-overflow-style: none;  /* IE/Edge */
-    scrollbar-width: none;     /* Firefox */
-  }
+    -ms-overflow-style: none;  /* IE/Edge 
+    scrollbar-width: none;     /* Firefox 
+  } */
 .challange-action{
     width: 60%;
     margin: 20px auto;
@@ -515,7 +591,7 @@ article{
 
 aside{
   width: 100%;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   padding-bottom: 10px;
 }
 aside h2{
@@ -528,9 +604,16 @@ aside h2{
 aside p{
     font-size: 2rem;
     padding: 10px;
-    color: #fff;
+    color: #000;
 }
-
+aside a{
+  background-color: #ff7034;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin-left: 25px;
+  border-radius: 10px;
+}
 .shop-wrapper{
     width: 80%;
     margin: 100px auto;
@@ -620,10 +703,10 @@ aside p{
   height: 100%;
   object-fit: cover;
 }
-section h2{
+/* section h2{
   text-align: center;
-  font-size:4.5rem;
-}
+  font-size:2rem;
+} */
 .benefits{
   width: 100%;
   margin: 50px auto;
@@ -657,6 +740,7 @@ section h2{
 
 .btn{
   width: 300px;
+  margin: 20px auto;
 }
 
 .btn button{
@@ -697,9 +781,10 @@ section h2{
     .shop-action {
       flex-direction: column;
       width: 90%;
-      margin: 50px auto;
+      margin: 0 auto;
       gap: 20px;
       align-items: center;
+      margin-top: 50px;
     }
   .food-pack-image{
     padding-top: 100px;
@@ -757,6 +842,21 @@ section h2{
     .food-pack-content {
       margin-left: 30px
     }
+
+    aside a{
+      margin-left: 200px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #ff7034;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    .two{
+      display:none;
+    }
+    .wording{
+      padding-top: 100px;
+    }
     .carousel li {
       flex: 0 0 90%; /* Slightly more width on smaller screens */
     }
@@ -765,7 +865,9 @@ section h2{
       width: 90%;
       height: auto;
     }
-  
+    .metrix-img img {
+      padding-top: 20px;
+    }
     .shop-wrapper{
       flex-direction: column;
     }
@@ -789,26 +891,32 @@ section h2{
     .shop-action > button {
       font-size: 1.2rem;
     }
-  
-    .challange-action ul,
     .food-pack-action > ul {
       flex-direction: column;
       gap: 10px;
     }
-  
-    .challange-action ul > li,
     .food-pack-action ul > li {
       width: 100%;
     }
   
+    .challange-action ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 15px;
+    }
+
+    .challange-action ul > li{
+      width: 45%;
+      display: block;
+    }
     .img {
       width: 250px;
       height: 300px;
     }
 
     .ads{
-      width: 90%;
-      object-fit: cover;
+     display: none;
     }
     .testimonia ul{
       width: 100%;
@@ -820,7 +928,10 @@ section h2{
       width: 100%;
      
     }
-    .benefits{
+    .ingrident{
+      padding-top: 100px;
+    }
+    .benefits-wrapper{
       flex-direction: column;
       flex-wrap: nowrap;
     }
@@ -833,7 +944,7 @@ section h2{
       text-align: center;
     }
     .btn{
-      margin: 0 auto;
+      margin: 20px auto;
     }
     .metrix-content{
       display: block;

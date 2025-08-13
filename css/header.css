@@ -9,13 +9,17 @@ nav.navbar {
     /* position: fixed; */
   }
   
+  /* .header-main{
+
+  } */
   .logo {
     width: 30%;
     display: flex;
     justify-content: start;
     align-items:center;
-    font-size: 3rem;
+    font-size: 1.2rem;
     color: green;
+    font-weight: 900;
   }
   
   .logo img{
@@ -90,16 +94,57 @@ nav.navbar {
   color: #000;
   background-color: orange;
   font-size: 1.2rem;
+  cursor: pointer;
 }
   header{
     width:100%;
-    height: 700px;
+    height: 100vh;
+    max-height: 100vh;
+    /* background-image: url("/foodsurplus/himg-6.png");
+    background-size: cover;
+    background-color: #000; */
+    position: relative;
   }
 
   header >img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .heading{
+    position: absolute;
+    padding-top: 600px;
+    top: 0;
+    left: 800px;
+    color: green;
+    font-weight: 900;
+  }
+
+  .heading h1{
+    font-size: 4.5rem;
+    font-style: italic;
+  }
+
+  .downloads{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+
+  .downloads button{
+    width: 50%;
+    padding: 10px;
+    color: green;
+    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 2px solid #000;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
   }
   /* Mobile */
   @media screen and (max-width: 768px) {
@@ -111,8 +156,19 @@ nav.navbar {
     .logo {
       width: auto;
       margin-bottom: 10px;
+      font-weight: 900;
+      font-size: 1.2rem;
     }
-  
+    .logo > img{
+      width: 50px;
+      height: 50px;
+    }
+  .header-main{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
     .hamburger {
       display: block;
     }
@@ -139,5 +195,11 @@ nav.navbar {
     .navBtn button{
       display: none;
     }
+    
+    /* header{
+    background-image: url("/foodsurplus/IMG_1041.JPG");
+    background-size: cover;
+    background-color: #000;
+    } */
   }
   
