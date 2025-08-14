@@ -1,3 +1,45 @@
+.promo{
+    width: 60%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.write-up{
+    width: 45%;
+    padding-left: 25px;
+    font-size: 1.2rem;
+    color: #000;
+    
+}
+.write-up h2{
+    font-size: 2rem;
+    color: orange;
+    font-weight: 900;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+.write-up ul{
+    margin: 25px;
+}
+
+.write-up p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+    color: #000;
+}
+.promo-footer{
+    margin-bottom: 25px;
+}
+.promo video{
+    width: 45%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .highlight{
     background-color: orange;
 }
@@ -97,6 +139,12 @@ button{
         flex-direction: column;
     }
     .theme{
+        width: 100%;
+    }
+    .promo{
+        flex-direction: column;
+    }
+    .promo video{
         width: 100%;
     }
 }

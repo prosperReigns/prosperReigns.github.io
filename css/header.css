@@ -100,9 +100,7 @@ nav.navbar {
     width:100%;
     height: 100vh;
     max-height: 100vh;
-    /* background-image: url("/foodsurplus/himg-6.png");
-    background-size: cover;
-    background-color: #000; */
+    background-color: #000;
     position: relative;
   }
 

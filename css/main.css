@@ -34,7 +34,7 @@ main > .video-coverage{
   position: relative;
 }
 
-.video-coverage > video{
+.video-coverage > img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -832,8 +832,8 @@ aside a{
       width: 100%;
       margin-left: 25px;
     }
-    .video-coverage video{
-      display: block;
+    .video-coverage img{
+      margin-left: 0;
     }
   header img{
       object-fit: cover;
