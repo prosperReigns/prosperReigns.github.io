@@ -144,6 +144,9 @@ button{
     .promo{
         flex-direction: column;
     }
+    .promo .write-up{
+        width: 100%;
+    }
     .promo video{
         width: 100%;
     }
