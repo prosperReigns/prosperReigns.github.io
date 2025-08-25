@@ -41,114 +41,41 @@ main > .video-coverage{
   border-radius: 10px;
 }
 
-.food-pack-image {
-  position: relative;
-  height: 575px;
+.marquee {
+  width: 100%;
   overflow: hidden;
-  margin-top:  0px;
+  white-space: nowrap;
+  box-sizing: border-box;
+   /* optional, makes white text pop */
 }
 
-/* Each slide */
-.food-pack-image .img {
-  min-width: 100%;
-  flex-shrink: 0;
-  height: 100%;
-  text-align: center;
-}
-
-/* Images should cover full width */
-.food-pack-image img {
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-  margin-top: 0px;
-}
-
-/* Flex wrapper for sliding effect */
-.food-pack-image-inner {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-}
-
-/* Optional styling for captions */
-.food-pack-image p {
-  margin: 5px 0 0;
+.topic {
+  display: inline-block;
+  font-size: 4.5rem; /* make it big */
   font-weight: bold;
-  text-align: center;
-}
-.food-pack-image small {
-  display: block;
-  color: #666;
-  text-align: center;
-}
-.ingrident-wrapper{
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center ;
-  margin: 50px auto;
-  gap: 50px;
+  font-style: italic  ;
+  color: white;
+  -webkit-text-stroke: 2px orange; /* orange border */
+  text-stroke: 2px orange; /* fallback */
+  animation: scroll-left 10s linear infinite;
 }
 
-.ingrident{
-margin-top: 25px;
-  width: 350px;
-  height: 350px;
-  border-radius: 10px;
-  cursor: pointer;
-  /* border: 1px solid red; */
-} 
-
-.ingrident img{
-  width:100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  
+/* Marquee animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-.ingrident:hover{
-  scale: 1.2;
-}
-.ingrident img:hover{
-  object-fit: contain;
-}
-.mid{
-  width: 100%;
-  height: 350px;
-}
-
-.mid img{
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
 section img{
   width: 100%;
   max-height: 500px;
   object-fit: cover;
 }
-.food-wrapper{
-  border: 1px solid red;
-  width: 80%;
-  margin: 0 auto;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-}
 
-.food-wrapper img{
-  padding: 10px;
-  width: 500px;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
 
 .services {
   display: flex;
@@ -509,63 +436,6 @@ article{
   background-color:#ff7034;
 }
 
-
-/*.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    scrollbar-width: none; /* Firefox 
-  }
-  
-  .carousel li {
-    flex: 0 0 80%;
-    border-radius: 10px;
-    scroll-snap-align: start;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    min-height: 150px;
-    border-left: 2px solid #000;
-    position:relative;
-  }
-
-  .carousel li span{
-    position: absolute;
-    bottom: 10px;
-    left:700px;
-    font-size: 2rem;
-    z-index: 10;
-    color: var(--bg-light);
-    font-weight: bold;
-    text-shadow: 1px 1px 3px hsla(100, 50%, 0%, 0.75);
-  }
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .pic-1{
-    background-image: url('/foodsurplus/save.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .pic-2{
-    background-image: url('/foodsurplus/winnings.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .pic-3{
-    /* background-color: #ccc; 
-    background-image: url('/foodsurplus/community.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .carousel {
-    -ms-overflow-style: none;  /* IE/Edge 
-    scrollbar-width: none;     /* Firefox 
-  } */
 .challange-action{
     width: 60%;
     margin: 20px auto;
@@ -713,10 +583,7 @@ aside a{
   height: 100%;
   object-fit: cover;
 }
-/* section h2{
-  text-align: center;
-  font-size:2rem;
-} */
+
 .benefits{
   width: 100%;
   margin: 50px auto;
@@ -776,9 +643,6 @@ aside a{
   width: 45%;
   padding: 80px 25px;
   border: 3px solid var(--burnt-orange);
-  /* display: flex;
-  justify-content: space-evenly;
-  align-items: center; */
 }
 
 @media screen and (max-width: 768px) {
@@ -796,11 +660,6 @@ aside a{
       align-items: center;
       margin-top: 50px;
     }
-  /* .food-pack-image{
-    padding-top: 100px;
-    z-index: -1;
-    opacity: 0.75;
-  } */
     main > .write-up,
     main > .video-coverage,
     .food-pack-benefit,
@@ -1000,9 +859,6 @@ aside a{
       width: 100%;
      
     }
-    /* .ingrident{
-      padding-top: 100px;
-    } */
     .benefits-wrapper{
       flex-direction: column;
       flex-wrap: nowrap;

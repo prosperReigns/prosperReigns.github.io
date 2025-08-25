@@ -6,19 +6,12 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="foodsurplus\copy-of-images-for-food-surplus-1-96x59.png" type="image/x-icon">
     <title>Document</title>
     <style>
-        nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #000;
-    position: fixed;
-    z-index: 1000;
-}
 
         main{
     width: 80%;
@@ -69,7 +62,7 @@
         </div>
     </main>
 
-    <section id="food-carousel">
+    <section class="food-carousel">
         <small>crispy, every bite and taste</small>
         <h2>Popular Food Product</h2>
       
@@ -104,30 +97,37 @@
         </div>
       </section>
    
+      <div class="marquee">
+        <span class="topic">ENJOY DELICIOUS.TASTY MEAL</span>
+      </div>
+      
 
-    <section class="first">
-        <h2 class="food-pack-heading">Inside a food pack combo</h2>
-        <div class="ingrident-wrapper">
-            <div class="ingrident">
-                <img src="/foodsurplus/IMG-20250803-WA0024.jpg" alt="">
-            </div>
-            <div class="ingrident">
-                <img src="/foodsurplus/IMG-20250803-WA0025.jpg" alt="">
-            </div>
-            <div class="ingrident">
-                <img src="/foodsurplus/IMG-20250803-WA0021.jpg" alt="">
-            </div>
-            <div class="ingrident">
-                <img src="/foodsurplus/IMG-20250803-WA0022.jpg" alt="">
-            </div>
-            <div class="ingrident">
-                <img src="/foodsurplus/IMG-20250803-WA0019.jpg" alt="">
-            </div>
-            <div class="ingrident">
-                <img src="/foodsurplus/IMG-20250803-WA0020.jpg" alt="">
-            </div>
-            <div class="ingrident">
-                <img src="/foodsurplus/IMG-20250803-WA0023.jpg" alt="">
+    <section class="food-carousel">
+        <h2>Inside a Food Pack Combo</h2>
+
+        <div class="food-pack-image">
+            <div class="food-pack-image-inner">
+                <div class="img">
+                    <img src="/foodsurplus/IMG-20250803-WA0024.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="/foodsurplus/IMG-20250803-WA0025.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="/foodsurplus/IMG-20250803-WA0021.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="/foodsurplus/IMG-20250803-WA0022.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="/foodsurplus/IMG-20250803-WA0019.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="/foodsurplus/IMG-20250803-WA0020.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="/foodsurplus/IMG-20250803-WA0023.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -370,45 +370,7 @@
       </footer>
 
     <script src="js/navbar.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const carousel = document.querySelector(".food-pack-image-inner");
-          const slides = document.querySelectorAll(".food-pack-image .img");
-          let index = 0;
-          let intervalId;
-        
-          function showSlide(i) {
-            carousel.style.transform = `translateX(-${i * 100}%)`;
-          }
-        
-          function startCarousel() {
-            if (intervalId) return; // avoid multiple intervals
-            intervalId = setInterval(() => {
-              index = (index + 1) % slides.length;
-              showSlide(index);
-            }, 3000);
-          }
-        
-          function stopCarousel() {
-            clearInterval(intervalId);
-            intervalId = null;
-          }
-        
-          // Start carousel when in viewport
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                startCarousel();
-              } else {
-                stopCarousel();
-              }
-            });
-          }, { threshold: 0.5 });
-        
-          observer.observe(document.querySelector("#food-carousel"));
-        });
-        </script>
-    <!-- <script src="js/carousel.js"></script> -->
+    <script src="js/carousel.js"></script>
     <script src="js/food-package.js"></script>
     <script src="js/cards.js"></script>
     <script src="js/box-wrapper.js"></script>

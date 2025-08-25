@@ -1,36 +1,41 @@
-  const challangeSection = document.querySelector('.challange');
+document.addEventListener("DOMContentLoaded", () => {
+  // Select ALL carousels on the page
+  const carousels = document.querySelectorAll(".food-carousel");
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        challangeSection.classList.add('show');
-      } else {
-        challangeSection.classList.remove('show');
-      }
-    },
-    { threshold: 0.2 }
-  );
+  carousels.forEach((carouselSection) => {
+    const carousel = carouselSection.querySelector(".food-pack-image-inner");
+    const slides = carouselSection.querySelectorAll(".food-pack-image .img");
+    let index = 0;
+    let intervalId;
 
-  observer.observe(challangeSection);
+    function showSlide(i) {
+      carousel.style.transform = `translateX(-${i * 100}%)`;
+    }
 
-  const carousel = document.querySelector('.carousel');
-  let scrollInterval;
-  let scrollAmount = 300; // Amount to scroll per step (in px)
-  let delay = 3000; // 3 seconds
+    function startCarousel() {
+      if (intervalId) return; // avoid multiple intervals
+      intervalId = setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 3000);
+    }
 
-  function startCarousel() {
-    scrollInterval = setInterval(() => {
-      // Scroll right
-      if (
-        carousel.scrollLeft + carousel.clientWidth >=
-        carousel.scrollWidth
-      ) {
-        // If reached end, scroll back to start
-        carousel.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
-    }, delay);
-  }
+    function stopCarousel() {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
 
-  document.addEventListener('DOMContentLoaded', startCarousel);
+    // Observe EACH carousel independently
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCarousel();
+        } else {
+          stopCarousel();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(carouselSection);
+  });
+});

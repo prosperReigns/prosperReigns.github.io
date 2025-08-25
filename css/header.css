@@ -1,12 +1,15 @@
 
-nav.navbar {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
     height: 70px;
     background-color: #fff;
-    /* position: fixed; */
+    border: 1px solid #000;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
   }
   
   /* .header-main{
