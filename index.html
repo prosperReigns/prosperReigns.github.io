@@ -40,10 +40,11 @@
             </div>
             <ul class="nav-links" id="navLinks">
               <li><a href="/about.html">About Us</a></li>
-              <!-- <li><a href="/product.html">product</a></li> -->
+              <li><a href="/product.html">product</a></li>
               <li><a href="/fibo.html">Fibo</a></li>
               <li><a href="/hiw.html">How it works</a></li>
               <li><a href="/cook.html">cook and win</a></li>
+              <li><a href="/plan.html">Our Plan</a></li>
             </ul>
             <div class="navBtn"><button>Download</button></div>
           </nav>
@@ -67,38 +68,41 @@
             <img src="/foodsurplus/emediong-umoh-gw3ocaaamxa-unsplash-1187x791.jpg" alt="">
         </div>
     </main>
-    <section>
+
+    <section id="food-carousel">
         <small>crispy, every bite and taste</small>
-        <h2>Popular food combo</h2>
-    <div class="food-pack-image">
-        
-        <div class="img one">
-            <img src="foodsurplus/20250728_025547.png" alt="">
-            <p>yummy Spaghetti combo</p>
-            <small>N5000</small>
+        <h2>Popular Food Product</h2>
+      
+        <div class="food-pack-image">
+          <div class="food-pack-image-inner">
+            <div class="img">
+              <img src="foodsurplus/IMG-20250815-WA0000.jpg" alt="">
+              <p>fried rice combo</p>
+              <small>N5000</small>
+            </div>
+            <div class="img">
+              <img src="foodsurplus/IMG-20250815-WA0001.jpg" alt="">
+              <p>Egusi soup and swallow combo</p>
+              <small>N5000</small>
+            </div>
+            <div class="img">
+              <img src="foodsurplus/IMG-20250815-WA0002.jpg" alt="">
+              <p>yummy Jollof Rice combo</p>
+              <small>N5000</small>
+            </div>
+            <div class="img">
+              <img src="foodsurplus/IMG-20250815-WA0003.jpg" alt="">
+              <p>yummy Okro soup combo</p>
+              <small>N5000</small>
+            </div>
+            <div class="img">
+              <img src="foodsurplus/IMG-20250815-WA0004.jpg" alt="">
+              <p>yummy Bitterleaf combo</p>
+              <small>N5000</small>
+            </div>
+          </div>
         </div>
-        <div class="img one">
-            <img src="foodsurplus/20250728_030000.png" alt="">
-            <p>yummy Jollof rice combo</p>
-            <small>N5000</small>
-        </div>
-        <div class="img two">
-            <img src="foodsurplus/20250728_031545.png" alt="">
-            <p>yummy Fried Rice combo</p>
-            <small>N5000</small>
-        </div>
-        <div class="img two">
-            <img src="foodsurplus/20250728_031014.png" alt="">
-            <p>yummy Egusi soup combo</p>
-            <small>N5000</small>
-        </div>
-        <div class="img two">
-            <img src="foodsurplus/IMG-20250729-WA0003.jpg" alt="">
-            <p>yummy Bitterleaf combo</p>
-            <small>N5000</small>
-        </div>
-    </div>
-    </section>
+      </section>
    
 
     <section class="first">
@@ -330,16 +334,81 @@
         </div>
     </section> 
 
-    <footer>
-        Together, we’re building Nigeria’s largest food supply chain — one neighborhood at a time.
-        <br>
-        <strong>Partner with FOODSURPLUS today and turn your shop into a profit center for food security.</strong>
-        💬 FOODSURPLUS: <strong>“Saving More. Feeding Better. Together.”</strong><br/>
-        📞 08075994444 | 🌍 www.foodsurplus.ng
+    <footer class="footer">
+        <div class="footer-top">
+          <p>
+            This platform is designed to make food affordable, traceable, and accessible — especially for lower-income urban communities — by connecting verified farmers and producers directly to retail consumers through a smart, tech-enabled logistics chain.
+            In addition to our website, Working Knowledge publishes on social media and through a variety of content-sharing partnerships.
+          </p>
+        </div>
+      
+        <div class="footer-contact">
+          <h3>Food Surplus Nigeria</h3>
+          <p><strong>FSN Working Knowledge</strong></p>
+          <p>Stocklist shop | Fibo <br> Warehousing <br> 10, Akiogun oniru lagos island</p>
+          <p><a href="mailto:info@foodsurplusng">foodsurplusng.com`</a></p>
+      
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© President & Partners of Food Surplus Nigeria</p>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Fibo</a></li>
+            <li><a href="#">Cook and win</a></li>
+            <li><a href="#">Compensation plan</a></li>
+            <li><a href="#">Testimonia</a></li>
+            <li><a href="#">Faq</a></li>
+          </ul>
+        </div>
       </footer>
 
     <script src="js/navbar.js"></script>
-    <script src="js/carousel.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const carousel = document.querySelector(".food-pack-image-inner");
+          const slides = document.querySelectorAll(".food-pack-image .img");
+          let index = 0;
+          let intervalId;
+        
+          function showSlide(i) {
+            carousel.style.transform = `translateX(-${i * 100}%)`;
+          }
+        
+          function startCarousel() {
+            if (intervalId) return; // avoid multiple intervals
+            intervalId = setInterval(() => {
+              index = (index + 1) % slides.length;
+              showSlide(index);
+            }, 3000);
+          }
+        
+          function stopCarousel() {
+            clearInterval(intervalId);
+            intervalId = null;
+          }
+        
+          // Start carousel when in viewport
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                startCarousel();
+              } else {
+                stopCarousel();
+              }
+            });
+          }, { threshold: 0.5 });
+        
+          observer.observe(document.querySelector("#food-carousel"));
+        });
+        </script>
+    <!-- <script src="js/carousel.js"></script> -->
     <script src="js/food-package.js"></script>
     <script src="js/cards.js"></script>
     <script src="js/box-wrapper.js"></script>

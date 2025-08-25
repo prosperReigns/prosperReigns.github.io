@@ -1,124 +1,61 @@
-:root{
-  --bg-secondary: #a49e9e;
-  --bg-white: #fff;
-}
- footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #a49e9e;
-      color: #fff;
-    }
-.company, .quick-links, .social{
-    width: 50%;
-    margin: 10px 200px;
-    padding: 20px;
-    color: #fff;
-    font-size: 1.5rem;
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
-.company > h3{
-    font-size: 3rem;
-    color: var(--bg-white);
-    padding: 20px;
-    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
+.footer a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.company > p{
-    color: var(--bg-white);
-    padding: 20px;
-}
-.company >p> span{
-    display: block;
-    font-size: 1.5rem;
-    color: var(--bg-white);
-    padding: 20px 0;
-    text-align: left;
-}   
-
-.quick-links > h3{
-    font-size: 3rem;
-    color:var(--bg-white);
-    padding: 20px;
-    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
-}
-.quick-links > ul{
-    /* margin-top: 20px; */
-    list-style-type: none;
-}
-.quick-links > ul >li{
-    list-style-type: none;
-    padding: 10px;
-}
-.quick-links > ul >li> a{
-    padding: 20px 10px;
-    color: var(--bg-white);
-    font-size: 1.5rem;
-}
-.social > h3{
-    font-size: 3rem;
-    color: var(--bg-white);
-    padding: 20px;
-    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
+.footer-top {
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-.copyright{
-    width: 60%;
-    margin-inline: auto;
+.footer-contact h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
 }
-.copyright > p{
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 10px;
-    color: var(--bg-white);
-    text-shadow:1px 1px 3px hsla(100, 50%, 0%, 0.75);
+
+.footer-contact p {
+  margin: 5px 0;
 }
-@media screen and (max-width: 768px) {
-    .company,
-    .quick-links,
-    .social {
-      width: 90%;
-      margin: 10px auto;
-      padding: 15px;
-      font-size: 1.3rem;
-      text-align: center;
-    }
-  
-    .company > h3,
-    .quick-links > h3,
-    .social > h3 {
-      font-size: 2rem;
-      padding: 10px;
-    }
-  
-    .company > p,
-    .company > p > span {
-      font-size: 1.3rem;
-      padding: 10px 0;
-      text-align: center;
-    }
-  
-    .quick-links > ul {
-      padding: 0;
-    }
-  
-    .quick-links > ul > li {
-      padding: 8px;
-    }
-  
-    .quick-links > ul > li > a {
-      font-size: 1.3rem;
-      padding: 10px;
-    }
-  
-    .copyright {
-      width: 90%;
-      margin-inline: auto;
-      padding: 10px 0;
-    }
-  
-    .copyright > p {
-      font-size: 1.2rem;
-      padding: 8px;
-    }
-  }
-  
+
+.footer-socials {
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-bottom ul li {
+  display: inline;
+}
+
+.footer-bottom ul li a {
+  font-size: 13px;
+  opacity: 0.8;
+}

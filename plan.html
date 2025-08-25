@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/plan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Document</title>
+    <style>
+        nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000;
+    position: fixed;
+    z-index: 1000;
+}
+
+        main{
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px
+}
+.conpensation-header{
+    color: orange;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+}
+.connect-container{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.connect-container h2{
+    font-size: 3rem;
+    color: orange;
+    font-weight: 900;
+    padding: 10px;
+} 
+.connect-container small{
+    font-size: 0.9rem;
+    color: orange;
+    font-weight: 600;
+    margin-left: 15px;
+}
+.email-wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.email-wrapper ul{
+    list-style-type: none;
+}
+
+.email-wrapper ul li{
+    padding: 10px;
+    border: 2px solid orange;
+    color: #000;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="header-main">
+            <div class="logo"><img src="foodsurplus/copy-of-images-for-food-surplus-1-96x59.png">FOODSURPLUS</div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/product.html">product</a></li>
+          <li><a href="/fibo.html">Fibo</a></li>
+          <li><a href="/hiw.html">How it works</a></li>
+          <li><a href="/cook.html">cook and win</a></li>
+          <li><a href="/plan.html">Our Plan</a></li>
+        </ul>
+        <div class="navBtn"><button>Download</button></div>
+      </nav>
+    
+    <section>
+        <h2 class="conpensation-header">Our Compensation Plan</h2>
+        <div id="slide-container" style="width: 800px; height: 480px;">
+
+       
+        <iframe id="slides" src="https://docs.google.com/presentation/d//embed?start=true&loop=true&delayms=3000" frameborder="0" width="800" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> </div>
+
+    </section>
+
+    <section class="connect-container">
+        <h2>Discover more</h2>
+        <small>connect with us</small>
+        <div class="email-wrapper">
+            <ul>
+                <li>https://www.foodsurplus.com/webmail</li>
+                <li>info@foodsurplusng</li>
+                <li>accounts@foodsurplusng.com</li>
+                <li>customerservice@foodsurplusng.com</li>
+                <li>shops@foodsurplusng.com</li>
+                <li>colllectioncenter@foodsurplusng.com</li>
+                <li>warehouse@foodsurplus.com</li>
+                <li>fibo@foodsurplusnd.com</li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-top">
+          <p>
+            This platform is designed to make food affordable, traceable, and accessible — especially for lower-income urban communities — by connecting verified farmers and producers directly to retail consumers through a smart, tech-enabled logistics chain.
+            In addition to our website, Working Knowledge publishes on social media and through a variety of content-sharing partnerships.
+          </p>
+        </div>
+      
+        <div class="footer-contact">
+          <h3>Food Surplus Nigeria</h3>
+          <p><strong>FSN Working Knowledge</strong></p>
+          <p>Stocklist shop | Fibo <br> Warehousing <br> 10, Akiogun oniru lagos island</p>
+          <p><a href="mailto:info@foodsurplusng">foodsurplusng.com`</a></p>
+      
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© President & Partners of Food Surplus Nigeria</p>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Fibo</a></li>
+            <li><a href="#">Cook and win</a></li>
+            <li><a href="#">Compensation plan</a></li>
+            <li><a href="#">Testimonia</a></li>
+            <li><a href="#">Faq</a></li>
+          </ul>
+        </div>
+      </footer>
+
+    <script src="js/navbar.js"></script>
+    <script>
+        const iframe = document.getElementById("slides");
+        const autoplayurl = "https://docs.google.com/presentation/d/1LvKKSqE-Ry9YofiQuLlluR79H3ayED_H/embed?start=true&loop=true&delayms=3000"
+        const pauseurl = "https://docs.google.com/presentation/d//embed?start=false&loop=true";
+        const container = document.getElementById("slide-container");
+        container.addEventListener("mouseenter", () => {
+            iframe.src = pauseurl;
+        });
+        container.addEventListener("mouseleave", () => {
+            iframe.src = autoplayurl;
+        });
+    </script>
+</body>
+</html>
